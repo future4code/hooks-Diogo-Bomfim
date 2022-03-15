@@ -1,0 +1,15 @@
+7 Passos Fundamentais:
+
+1 - Atenção ao Enunciado -> É importante para que a pessoa desenvolvedora consiga absolver o que o enunciado realmente pede, e assim consiga prosseguir com a construção do código.
+
+2 - Retirar Informações relevantes -> Fazendo a filtragem de informações importantes a pessoas desenvolvedora consegue fácilmente compreender o objetivo final do código.
+
+3 - Pensar Entradas e Saídas -> Pensar nas possíveis entradas e saídas vai te dar uma visão mais ampla de como o código deveria funcionar.
+
+4 - Esquema Visual -> Um esquema visual ajuda a criar os processos do código, tais como estruturas condicionais e de repetição.
+
+5 - Criar um Código feio -> Começar a escrever o código da forma que foi pensada inicialmente vai te ajudar a começar a sessão de testes e pensar como reformular seu código da forma mais otimizada.
+
+6 - Testar Força Bruta -> Aqui começa a sessão de testes, onde você vai testar seu código inicial e ver se os inputs geram os outputs esperados.
+
+7  - Refatorar -> E finalmente o momento em que seu código será otimizado, mudando nome de variáveis, separando funcões da forma correta, arrumando a sintaxe e entre outros...

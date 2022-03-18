@@ -33,7 +33,15 @@ function retornaNumerosPares(array) {
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
- 
+    const novoArray = []
+
+    for (item of array) {
+        if (item %2 === 0) {
+            novoArray.push(item * item)
+        }
+    }
+    
+    return novoArray
 }
 
 // EXERCÍCIO 06

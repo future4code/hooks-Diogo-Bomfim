@@ -46,7 +46,15 @@ function retornaNumerosParesElevadosADois(array) {
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
+    let maiorNum = 0
   
+    for (item of array) {
+        if (item >= maiorNum) {
+            maiorNum = item
+        }
+    }
+    
+    return maiorNum
 }
 
 // EXERCÍCIO 07

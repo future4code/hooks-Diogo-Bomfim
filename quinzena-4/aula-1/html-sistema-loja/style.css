@@ -1,0 +1,169 @@
+
+#bem-vindo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    background-color: rgb(28, 38, 71);
+    text-align: center;
+    box-shadow: 10px 5px 5px rgb(102, 101, 101);
+}
+
+#bem-vindo p{
+    font-size: 20px;
+    margin-top: -20px;
+}
+
+/*Configurações de menu*/
+#menu {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-align: right;
+}
+
+#menu #inicial {
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    box-shadow: 5px 5px 5px rgb(196, 196, 196)
+}
+
+#menu #estoque {
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    box-shadow: 5px 5px 5px rgb(196, 196, 196)
+}
+
+#menu #add-prod {
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    box-shadow: 5px 5px 5px rgb(196, 196, 196)
+}
+
+#menu #funcionarios {
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    box-shadow: 5px 5px 5px rgb(196, 196, 196)
+}
+
+#menu #inicial:hover {
+    background-color: rgb(28, 38, 71);
+}
+
+#menu #estoque:hover {
+    background-color: rgb(28, 38, 71);
+}
+
+#menu #add-prod:hover {
+    background-color: rgb(28, 38, 71);
+}
+
+#menu #funcionarios:hover {
+    background-color: rgb(28, 38, 71);
+}
+
+/*Formatação rodapé*/
+div#redes-sociais {
+    display: block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 650px;
+    background-color: rgb(28, 38, 71);
+    color: white;
+    padding: 50px;
+}
+
+div#redes-sociais #siga {
+    text-align: left;
+    margin-top: -20px;
+}
+
+div#redes-sociais img#logo-facebook {
+    display: flex;
+    width: 30px;
+    margin: -40px 0px 0px 200px;
+}
+
+div#redes-sociais #user-facebook {
+    margin-top: -25px;
+    margin-left: 240px;
+}
+
+div#redes-sociais img#logo-instagram {
+    display: flex;
+    width: 30px;
+    margin: -2px 0px 0px 200px;
+}
+
+div#redes-sociais #user-instagram {
+    margin-top: -25px;
+    margin-left: 240px;
+}
+
+div#redes-sociais img#logo-twitter {
+    display: flex;
+    width: 30px;
+    margin: -2px 0px 0px 200px;
+}
+
+div#redes-sociais #user-twitter {
+    margin-top: -25px;
+    margin-left: 240px;
+}
+
+div#redes-sociais #seta-branca {
+    display: flex;
+    width: 150px;
+    margin-top: -70px;
+}
+
+/*Controle de estoque CSS*/
+div#inicio-estoque{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    background-color: rgb(28, 38, 71);
+    text-align: center;
+    box-shadow: 10px 5px 5px rgb(102, 101, 101);
+}
+
+div#inicio-estoque h2 {
+    margin-top: -20px;
+}
+
+/*Add produtos CSS*/
+div#inicio-produtos {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    background-color: rgb(28, 38, 71);
+    text-align: center;
+    box-shadow: 10px 5px 5px rgb(102, 101, 101);
+}
+
+h2#add-prod {
+    display: inline;
+    padding: 5px; 
+    background-color: rgb(28, 38, 71);
+    color: white;
+    box-shadow: 10px 5px 5px rgb(102, 101, 101);
+}
+
+form {
+    margin-top: 30px;
+}
+
+/*Funcionários CSS*/
+div#inicio-func {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    background-color: rgb(28, 38, 71);
+    text-align: center;
+    box-shadow: 10px 5px 5px rgb(102, 101, 101);
+}
+
+h2#funcs {
+    display: inline;
+    padding: 5px; 
+    background-color: rgb(28, 38, 71);
+    color: white;
+    box-shadow: 10px 5px 5px rgb(102, 101, 101);
+}

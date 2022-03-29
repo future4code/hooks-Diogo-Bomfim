@@ -138,6 +138,14 @@ td button {
     height: 100px;
 }
 
+.compra:hover {
+    background-color: #c5b050;
+}
+
+.compra:active {
+    color: white;
+}
+
 
 #back-button {
     background-color: white;

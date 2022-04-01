@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+/*CONFIGURAÇÕES DE HEADER*/
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: mediumvioletred;
+    padding: 10px;
+}
+
+.container img {
+    width: 30px;
+    height: 30px;
+    padding-right:10px;
+    padding-left:10px;
+}
+
+.container h1 {
+    flex-grow: 1;
+}
+
+.container button {
+    align-self: center;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+/*CONFIGURAÇÕES DE MENU*/
+
+.menu {
+    width: 350px;
+    height: 850px;
+    display: flex;
+    background-color: #f2d0e0;
+    flex-direction: column;
+    padding-top: 8px;
+    padding-left: 0px;
+}
+
+.menu p {
+    margin-top: 19px;
+    padding-left: 60px;
+}
+
+/*Configurações imagens menu*/
+.menu img {
+    position: absolute;
+    width: 25px;
+    margin-left: -40px;
+    padding-left: 50px;  
+}
+
+.menu img#icone-casa {
+    margin-top: 12px;
+}
+
+.menu img#icone-docinho {
+    margin-top: 50px;
+}
+
+.menu img#icone-carrinho {
+    margin-top: 90px;
+}
+
+.menu img#icone-perfil {
+    margin-top: 125px;
+}
+
+.menu img#seta1 {
+    position: absolute;
+    width: 25px;
+    align-self: end;
+    margin-top: 12px;
+}
+
+.menu img#seta2 {
+    position: absolute;
+    width: 25px;
+    align-self: end;
+    margin-top: 50px;
+}
+
+.menu img#seta3 {
+    position: absolute;
+    width: 25px;
+    align-self: end;
+    margin-top: 90px;
+}
+
+.menu img#seta4 {
+    position: absolute;
+    width: 25px;
+    align-self: end;
+    margin-top: 125px;
+}
+
+/*CONFIGURAÇÕES DA MAIN*/
+
+.principal {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    height: 830px;
+    width: 1520px;
+    margin-top: -840px;
+    margin-left: 370px;
+    column-gap: 10px;
+    row-gap: 20px;
+}
+
+div#bolo1 {
+    background-color: white;
+    box-shadow: 0px 1px 3px darkgray;
+    border-radius: 5px;
+    padding: -10px;
+}
+
+div#bolo1 img{
+    width: 373px;
+    height: 300px;
+    margin-left: 0px;
+    grid-row: 1;
+}
+
+div#bolo1 h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+div#bolo1 p {
+    text-align: center;
+    margin-left: 70px;
+    margin-right: 60px;
+    margin-top: 10px;
+}
+
+/*CONFIGURAÇÃO FOOTER*/
+
+.rodapé {
+    display: flex;
+    background-color: mediumvioletred;
+    padding: 20.5px;
+    margin-top: 10px;
+    justify-content: center;
+    font-weight: bold;
+}

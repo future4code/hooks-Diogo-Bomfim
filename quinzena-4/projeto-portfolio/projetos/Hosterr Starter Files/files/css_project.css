@@ -1,0 +1,254 @@
+@charset "UTF-8"; 
+
+/* Import das fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Titillium+Web:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/*Formatação para as fontes funcionarem */
+@font-face {
+    font-family: 'Playfair';
+    src: url("../fontes/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url("../fontes/Lato/Lato-Light.ttf");
+}
+
+body {
+    background-color: #e6dcc7;
+    overflow: hidden
+}
+
+/*Formatação do HGROUP */ 
+hgroup h1 {
+    position: relative;
+    font-family: 'Playfair', sans-serif;
+    font-size: 40pt;
+    top: 300px;
+    left: 130px;  
+}
+
+hgroup h3 {
+    position: relative;
+    font-family: 'Lato';
+    font-size: 17pt;
+    top: 280px;
+    left: 130px;
+
+}
+
+hgroup h3#h3_check {
+    font-size: 12pt;
+    top: 360px;
+    left: 157px;
+}
+
+hgroup h3#doubts {
+    position: absolute;
+    font-family: "Playfair";
+    font-weight: lighter;
+    font-size: 15pt;
+    top: 860px;
+    left: 1360px;
+}
+
+hgroup h3#especialist {
+    position: absolute;
+    font-family: "Lato";
+    font-size: 15pt;
+    top: 890px;
+    left: 1360px;
+}
+
+hgroup h4 {
+    position: relative;
+    font-family: 'Lato';
+    top: 240px;
+    left: 490px;
+    color: white;
+    background-color: rgb(79, 79, 179);
+    padding: 20px;
+    width: 160px;
+    height:18px;
+    border-radius: 7px;
+}
+
+hgroup h4#wait_list_top {
+    position: absolute;
+    top: 60px;
+    left: 1320px;
+}
+
+hgroup a {
+    text-decoration: none;
+    color: white;
+}
+
+hgroup h4:hover {
+    color: rgb(79, 79, 179);
+    background-color: white;
+}
+
+hgroup h4:hover a {
+    color: rgb(79, 79, 179);
+}
+
+hgroup h4#hiring {
+    font-size: 9pt;
+    text-align: center;
+    top: -339px;
+    left: 250px;
+    width: 134px;
+    padding: 7px;
+    border-radius: 90px;
+    background-image: linear-gradient(to right, rgb(235, 185, 21), rgb(241, 28, 28));
+}
+hgroup h4#hiring:hover {
+    color: rgb(255, 255, 255);   
+}
+
+/*Formatação do campo de Email*/
+input#cEmail {
+    position: relative;
+    font-family: 'Lato';
+    font-size: 12pt;
+    color: black;
+    background-color: #f3ecde;
+    top: -391px;
+    left: 130px;
+    padding: 20px;
+    box-shadow: 1px 1px 3px rgb(184, 181, 181);
+    border: none;
+    border-radius: 5px;
+}
+
+input#cEmail:hover {
+    background-color: #d3cdc2;
+}
+
+/*Formatação das imagens*/
+
+img#check {
+    position: relative;
+    top: -322px;
+    left: -225px;
+}
+
+img#blue_shape {
+    position: relative;
+    width: 470px;
+    left: 740px;
+    top: -250px;
+    transform: rotate(-45deg);
+}
+
+img#pink_shape {
+    position: relative;
+    width: 470px;
+    left: 260px;
+    top: -250px;
+    transform: rotate(-30deg);
+}
+
+img#purple_shape {
+    position: relative;
+    width: 470px;
+    left: -200px;
+    top: -230px;
+    transform: rotate(-20deg);
+}
+
+img#normal_shape {
+    position: relative;
+    width: 470px;
+    left: 1100px;
+    top: -800px;
+    transform: rotate(0deg);
+}
+
+img#logo {
+    position: absolute;
+    top: 100px;
+    left: 140px;
+}
+
+img#help {
+    position: absolute;
+    top: 886px;
+    left: 1300px;
+}
+
+img#facebook {
+    position: absolute;
+    width: 40px;
+    top: 910px;
+    left: 127px;
+}
+
+img#instagram {
+    position: absolute;
+    width: 28px;
+    top: 911px;
+    left: 268px;
+}
+
+img#twitter {
+    position: absolute;
+    width: 30px;
+    top: 911px;
+    left: 399px;
+}
+
+/*Formatação do menu*/
+
+nav#menu ul {
+    font-family: 'Lato';
+    font-weight: bold;
+    position: absolute;
+    list-style: none;
+    top: 75px;
+    left: 600px;
+}
+
+nav#menu li {
+    display: inline-block;
+    margin: 10px;
+}
+nav#menu li#sign {
+    position: absolute;
+    font-family: 'Lato';
+    font-weight: bold;
+    top: 89px;
+    left: 1200px;
+}
+nav#menu li:hover {
+    color: whitesmoke;
+}
+
+/*Formatação Menu de midias sociais*/
+
+nav#social_medias ul {
+    font-family: "Lato";
+    font-weight: bold;
+    position: absolute;
+    list-style: none;
+    top: 870px;
+    left: 100px;
+    
+}
+
+nav#social_medias li {
+    display: inline-block;
+    margin: 30px;
+    
+}
+
+nav#social_medias a {
+    text-decoration: none;
+    color: black;
+}
+
+nav#social_medias a:hover {
+    color: rgb(165, 164, 164);
+}

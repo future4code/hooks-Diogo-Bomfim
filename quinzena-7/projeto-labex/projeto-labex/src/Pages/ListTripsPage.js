@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {Header, Footer} from "../Constants/ConstantStyles.js"
 import { useState, useEffect} from "react";
+import {useNavigate} from "react-router-dom";
 import axios from "axios";
 
 const Trips = styled.div`
@@ -18,6 +19,7 @@ const TripScreen = styled.div`
 `
 
 const ListTripsPage = () => {
+    const navigate = useNavigate()
     const [tripList, setTripList] = useState([])
 
     const getTrips = () => {
@@ -47,6 +49,13 @@ const ListTripsPage = () => {
     }
 )
     
+    const goToApplicationForm = () => {
+        navigate("/trips/application")
+    }
+
+    const goBack = () => {
+        navigate(-1)
+    }
     return (
         <div>
             <Header>
@@ -55,7 +64,10 @@ const ListTripsPage = () => {
             
             <TripScreen>
                 <h1>Lista de viagens</h1>
+                <button onClick={() => goToApplicationForm()}>Inscrever-se em uma viagem</button>
+                <button onClick={() => goBack()}>Voltar</button>
                 {renderTrips}
+                
             </TripScreen>
             
         </div>

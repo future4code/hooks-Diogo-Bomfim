@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Header, Footer} from "../Constants/ConstantStyles.js"
+import {useNavigate} from "react-router-dom";
 
 const CardAreas = styled.div`
     display: flex;
@@ -7,7 +8,6 @@ const CardAreas = styled.div`
     margin-top: 200px;
     text-align: center;
 `
-
 const CardPublicArea = styled.div`
     width: 250px;
     height: 150px;
@@ -38,6 +38,17 @@ const CardButton = styled.button`
 `
 
 const HomePage = () => {
+    const navigate = useNavigate()
+
+    const goToPublicArea = () => {
+        navigate("/trips/list")
+    }
+
+    const goToPrivateArea = () => {
+        navigate("/admin/trips/list")
+    }
+
+
     return (
         <div>
             <Header>
@@ -48,12 +59,12 @@ const HomePage = () => {
             <CardAreas>
                 <CardPublicArea>
                     <h2>Área Pública</h2>
-                    <CardButton >Entrar</CardButton>
+                    <CardButton onClick={() => goToPublicArea()}>Entrar</CardButton>
                 </CardPublicArea>
                 
                 <CardPrivateArea>
                     <h2>Área Privada</h2>
-                    <CardButton>Entrar</CardButton>
+                    <CardButton onClick={() => goToPrivateArea()}>Entrar</CardButton>
                 </CardPrivateArea>
             </CardAreas>
 

@@ -1,14 +1,13 @@
 import React from 'react';
-import { useEffect, useState } from "react"
-import HomePage from '../src/Pages/HomePage'; 	
-import ListTripsPage from './Pages/ListTripsPage';
-import ApplicationFormPage from './Pages/ApplicationFormPage';
+import Router from './hooks/Router';
 
 const App = () => {
   return (
+    
     <div>
-      <ListTripsPage/>
+      <Router/>
     </div>
+    
   );
 }
 

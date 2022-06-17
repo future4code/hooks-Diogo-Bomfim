@@ -3,6 +3,7 @@ import {Header, Footer} from "../Constants/ConstantStyles.js"
 import { useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
+import { goBack } from "../hooks/Coordinator.js";
 
 const ApplicationFormPage = () => {
     const navigate = useNavigate()
@@ -91,10 +92,6 @@ const ApplicationFormPage = () => {
         return <option key={trip.id} value={trip.id}> {trip.name} </option>         
     }
 )
-
-    const goBack = () => {
-        navigate(-1)
-    }
     
     return (
         <div>
@@ -114,7 +111,7 @@ const ApplicationFormPage = () => {
                 <input placeholder="Profissão" value={professionApplyed} onChange={onChangeProfession}/>
                 <input placeholder="País" value={countryApplyed} onChange={onChangeCountry}/>
                 <button onClick={() => applyToTrip()}>Enviar</button>
-                <button onClick={() => goBack()}>Voltar</button>
+                <button onClick={() => goBack(navigate)}>Voltar</button>
             </div>
         </div>
     )

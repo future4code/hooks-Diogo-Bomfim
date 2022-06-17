@@ -3,6 +3,7 @@ import {Header, Footer} from "../Constants/ConstantStyles.js"
 import { useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
+import { goBack, goToApplicationForm } from "../hooks/Coordinator.js";
 
 const Trips = styled.div`
     background-color: pink;
@@ -49,13 +50,6 @@ const ListTripsPage = () => {
     }
 )
     
-    const goToApplicationForm = () => {
-        navigate("/trips/application")
-    }
-
-    const goBack = () => {
-        navigate(-1)
-    }
     return (
         <div>
             <Header>
@@ -64,8 +58,8 @@ const ListTripsPage = () => {
             
             <TripScreen>
                 <h1>Lista de viagens</h1>
-                <button onClick={() => goToApplicationForm()}>Inscrever-se em uma viagem</button>
-                <button onClick={() => goBack()}>Voltar</button>
+                <button onClick={() => goToApplicationForm(navigate)}>Inscrever-se em uma viagem</button>
+                <button onClick={() => goBack(navigate)}>Voltar</button>
                 {renderTrips}
                 
             </TripScreen>

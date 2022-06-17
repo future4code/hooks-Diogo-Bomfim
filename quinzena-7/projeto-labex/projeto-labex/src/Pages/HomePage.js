@@ -1,76 +1,85 @@
 import styled from "styled-components";
-import {Header, Footer} from "../Constants/ConstantStyles.js"
 import {useNavigate} from "react-router-dom";
+import { goToPublicArea, goToPrivateArea } from "../hooks/Coordinator.js";
+
+
 
 const CardAreas = styled.div`
+    width: 100%;
+    height: 100vh;
     display: flex;
-    justify-content: space-around;
-    margin-top: 200px;
+    gap: 15%;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 `
 const CardPublicArea = styled.div`
-    width: 250px;
-    height: 150px;
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 370px;
+    height: 250px;
     padding: 10px;
     border-radius: 25px;
+    box-shadow:  28px 28px 57px #a6a6a6, -28px -28px 57px #ffffff;
     &:hover {
         
     }
 `
-
 const CardPrivateArea = styled.div`
-    width: 250px;
-    height: 150px;
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 370px;
+    height: 250px;
     padding: 10px;
     border-radius: 25px;
+    box-shadow:  28px 28px 57px #a6a6a6, -28px -28px 57px #ffffff;
     &:hover {
         
     }
 `	
 const CardButton = styled.button`
-    width: 100px;
-    background-color: red;
-    border: 1.5px solid black;
-    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #008CBA;
+    font-weight: bolder;
+    color: white;
     cursor: pointer;
+    &:hover {
+        background-color: blue;
+        transition: 1.0s;
+    }
+`
+const H2Areas = styled.h2`
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
 `
 
 const HomePage = () => {
     const navigate = useNavigate()
 
-    const goToPublicArea = () => {
-        navigate("/trips/list")
-    }
-
-    const goToPrivateArea = () => {
-        navigate("/admin/trips/list")
-    }
-
-
     return (
         <div>
-            <Header>
-                <h1>Header</h1>
-            </Header>
             
-
-            <CardAreas>
-                <CardPublicArea>
-                    <h2>Área Pública</h2>
-                    <CardButton onClick={() => goToPublicArea()}>Entrar</CardButton>
-                </CardPublicArea>
-                
-                <CardPrivateArea>
-                    <h2>Área Privada</h2>
-                    <CardButton onClick={() => goToPrivateArea()}>Entrar</CardButton>
-                </CardPrivateArea>
-            </CardAreas>
-
-            <Footer>
-                <h1>Footer</h1>
-            </Footer>
+            
+            
+                <CardAreas>
+                    <CardPublicArea>
+                        <H2Areas>🚀 Ver Viagens</H2Areas>
+                        <CardButton onClick={() => goToPublicArea(navigate)}>Entrar</CardButton>
+                    </CardPublicArea>
+                    
+                    <CardPrivateArea>
+                        <H2Areas>👩‍💻 Área de Admin</H2Areas>
+                        <CardButton onClick={() => goToPrivateArea(navigate)}>Entrar</CardButton>
+                    </CardPrivateArea>
+                </CardAreas>
+            
             
         </div>
     )

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import {useNavigate} from "react-router-dom";
 import { goToPublicArea, goToPrivateArea } from "../hooks/Coordinator.js";
-
-
+import Button from '@mui/material/Button';
+import {FooterFixo} from "../constants/constants"
 
 const CardAreas = styled.div`
     width: 100%;
@@ -22,7 +22,7 @@ const CardPublicArea = styled.div`
     height: 250px;
     padding: 10px;
     border-radius: 25px;
-    box-shadow:  28px 28px 57px #a6a6a6, -28px -28px 57px #ffffff;
+    box-shadow: 28px 28px 57px #a6a6a6, -28px -28px 57px #ffffff;
     &:hover {
         
     }
@@ -36,28 +36,14 @@ const CardPrivateArea = styled.div`
     height: 250px;
     padding: 10px;
     border-radius: 25px;
-    box-shadow:  28px 28px 57px #a6a6a6, -28px -28px 57px #ffffff;
+    box-shadow: 28px 28px 57px #a6a6a6, -28px -28px 57px #ffffff;
     &:hover {
         
     }
 `	
-const CardButton = styled.button`
-    width: 120px;
-    height: 40px;
-    border: none;
-    border-radius: 10px;
-    background-color: #008CBA;
-    font-weight: bolder;
-    color: white;
-    cursor: pointer;
-    &:hover {
-        background-color: blue;
-        transition: 1.0s;
-    }
-`
 const H2Areas = styled.h2`
     font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
 `
 
 const HomePage = () => {
@@ -65,22 +51,20 @@ const HomePage = () => {
 
     return (
         <div>
-            
-            
-            
-                <CardAreas>
-                    <CardPublicArea>
-                        <H2Areas>🚀 Ver Viagens</H2Areas>
-                        <CardButton onClick={() => goToPublicArea(navigate)}>Entrar</CardButton>
-                    </CardPublicArea>
-                    
-                    <CardPrivateArea>
-                        <H2Areas>👩‍💻 Área de Admin</H2Areas>
-                        <CardButton onClick={() => goToPrivateArea(navigate)}>Entrar</CardButton>
-                    </CardPrivateArea>
-                </CardAreas>
-            
-            
+            <CardAreas>
+                <CardPublicArea>
+                    <H2Areas>🚀 Ver Viagens</H2Areas>
+                    <Button variant="contained"  size="large" disableElevation onClick={() => goToPublicArea(navigate)}> Entrar</Button>
+                </CardPublicArea>
+        
+                <CardPrivateArea>
+                    <H2Areas>👩‍💻 Área de Admin</H2Areas>
+                    <Button variant="contained" size="large" disableElevation onClick={() => goToPrivateArea(navigate)}>Entrar</Button>
+                </CardPrivateArea>
+            </CardAreas>
+            <FooterFixo>
+                <p>© 2022 Todos direitos reservados.</p>
+            </FooterFixo>
         </div>
     )
 }

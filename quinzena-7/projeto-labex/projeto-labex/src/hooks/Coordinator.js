@@ -12,11 +12,25 @@ export const goToApplicationForm = (navigate) => {
 export const goToCreateTrip = (navigate) => {
     navigate("/admin/trips/create")
 }
+export const goToSeeTripDetail = (navigate) => {
+    navigate(`/admin/trips/${localStorage.getItem("tripId")}`)
+}
 
 // NAVIGATE HomePage
 export const goToPublicArea = (navigate) => {
     navigate("/trips/list")
 }
+// PRIVATE AREA HOOK
 export const goToPrivateArea = (navigate) => {
-    navigate("/admin/trips/list")
+    const token = localStorage.getItem("token")
+    
+    if (token === null) {
+        navigate("/login")
+    }
+    
+    else {
+        navigate("/admin/trips/list")
+    }
 }
+
+// navigate(`/trips/admin/trips/${localStorage.getItem("tripId")}`)

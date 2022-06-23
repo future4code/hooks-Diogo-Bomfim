@@ -1,10 +1,10 @@
 import { useNavigate} from "react-router-dom";
-import { goBack } from "../hooks/Coordinator";
-import { useProtectedPage } from "../hooks/useProtectedPage";
+import { goBack } from "../../hooks/Coordinator";
+import { useProtectedPage } from "../../hooks/useProtectedPage";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { AddAlarmSharp } from "@mui/icons-material";
+
 
 const DivCandidates = styled.div`
     display: flex;
@@ -19,6 +19,7 @@ const TripsDetailsPage = () => {
     const [approvedCandidates, setApprovedCandidates] = useState([])
 
     useEffect(() => {getTripDetail()}, [() => getTripDetail()])
+    
     const getTripDetail = () => {
         const headers = {
             headers : {
@@ -36,7 +37,7 @@ const TripsDetailsPage = () => {
             }
         )
             .catch((error) => {
-                alert("erro")
+                console.log(error)
             }
         )
     }
@@ -77,7 +78,7 @@ const TripsDetailsPage = () => {
     const renderApprovedCandidates = approvedCandidates.map((candidate) => {
         return <div key={candidate.id}>
                     <p>{candidate.name}</p>
-                </div>
+               </div>
     }
 )
 
@@ -89,7 +90,7 @@ const TripsDetailsPage = () => {
     else {
         return render
     }
-   } 
+} 
 
    
 

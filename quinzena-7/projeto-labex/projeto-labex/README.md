@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+<h1 align="center">PROJETO LABEX<h1/>
+<p align="justify">O LabeX é uma plataforma de gerenciamento de viagens espaciais com o intuito de auxiliar o usuário e o administrador respectivamente a inscrever-se em viagens e gerenciar viagens e candidatos.</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h2>🔓 Acesso </h2>
+<p> ⚫ E-mail: diogohbomfim@gmail.com</p>
+<p> ⚫ Senha: 123456</p>
+ 
+ <h2>👨‍💻 Surge </h2>
+ <p>https://natural-hall.surge.sh/</p>
+  
+ <h2>🖥 Tecnologias utilizadas</h2>
+ <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+ <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white">
+ <p>💻 AXIOS</p>
+  
+<h2>📷 Imagens</h2>
+![image](https://user-images.githubusercontent.com/98038433/175661673-e37dfe4b-c742-439b-9960-f142e7758056.png)
+![image](https://user-images.githubusercontent.com/98038433/175661707-55d3c43b-ce48-4688-b1b9-6ce2e851d27e.png)
+![image](https://user-images.githubusercontent.com/98038433/175661758-f70a9ce2-6029-46bb-aaca-dc62922cde25.png)
+![image](https://user-images.githubusercontent.com/98038433/175661796-d9793a17-3e7d-4d2b-adcc-90889b1f4a71.png)
+![image](https://user-images.githubusercontent.com/98038433/175661892-ac247443-fd3f-41f6-b072-e4670c95392d.png)
+![image](https://user-images.githubusercontent.com/98038433/175661932-c562f7e9-f36b-41c1-b5cd-fc027f193cff.png)
+![image](https://user-images.githubusercontent.com/98038433/175661972-b7e60bfe-96b3-40bb-b15a-da067ddfb136.png)

@@ -1,5 +1,5 @@
 import {useNavigate} from "react-router-dom";
-import { goToCreateTrip, goToPrivateArea, goToSeeTripDetail } from "../../hooks/Coordinator";
+import { goToCreateTrip, goToHome, goToSeeTripDetail } from "../../hooks/Coordinator";
 import { useProtectedPage } from "../../hooks/useProtectedPage";
 import axios from "axios"
 import useRequestData from "../../hooks/useRequestData";
@@ -45,7 +45,7 @@ const AdminHomePage = () => {
 
     const onClickLogOff = () => {
         localStorage.removeItem("token")
-        goToPrivateArea(navigate)
+        goToHome(navigate)
     }
 
     const renderTrips = tripList && tripList.trips.map((trip) => {
@@ -55,8 +55,7 @@ const AdminHomePage = () => {
                         <Button variant="contained" onClick={() => onClickSetTripId(trip.id)}>VER DETALHES</Button>
                         <Button color="error" variant="outlined" onClick={() => deleteTrip(trip.id)}>APAGAR</Button>
                     </DivButtons>
-               </CardTripDiv>
-                   
+               </CardTripDiv>     
         }
     )           
 
@@ -65,7 +64,7 @@ const AdminHomePage = () => {
             <DivTrips>
                 <DivInitialInfos>
                     <Button variant="outlined" disableElevation onClick={() => onClickLogOff()} >Logout</Button>
-                    <Button variant="contained" disableElevation onClick={() => goToCreateTrip(navigate)}>CRIAR VIAGEM</Button>
+                    <Button variant="contained" disableElevation onClick={() => goToCreateTrip(navigate)}>CRIAR VIAGEM</Button> 
                 </DivInitialInfos>
                 <H2InitialInfos>Viagens</H2InitialInfos>
                 {renderTrips}

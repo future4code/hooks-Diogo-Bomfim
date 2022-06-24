@@ -12,6 +12,11 @@ export const goToApplicationForm = (navigate) => {
 export const goToCreateTrip = (navigate) => {
     navigate("/admin/trips/create")
 }
+
+export const goToHome = (navigate) => {
+    navigate("/")
+}
+
 export const goToSeeTripDetail = (navigate) => {
     navigate(`/admin/trips/${localStorage.getItem("tripId")}`)
 }

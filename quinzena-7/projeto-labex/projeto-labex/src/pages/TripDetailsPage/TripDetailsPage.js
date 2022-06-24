@@ -3,13 +3,9 @@ import { goBack } from "../../hooks/Coordinator";
 import { useProtectedPage } from "../../hooks/useProtectedPage";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import styled from "styled-components";
-
-
-const DivCandidates = styled.div`
-    display: flex;
-`
-
+import { DivCandidates, DivTripDetails, DivDetails, H1Detail, BTripDetails, DivAllCandidates, ContainerCandidates, DivButtons } from "../TripDetailsPage/styles"
+import { Button } from "@mui/material";
+import {FooterFixo} from "../../constants/constants"
 
 const TripsDetailsPage = () => {
     useProtectedPage()
@@ -57,7 +53,13 @@ const TripsDetailsPage = () => {
             .put(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/diogo-bomfim-hooks/trips/${localStorage.getItem("tripId")}/candidates/${candidate}/decide`, body, headers)
 
             .then((response) => {
-                alert("aprovado")
+                if (approve === true) {
+                    alert("Candidato aprovado!")
+                }
+
+                else {
+                    alert("Candidato reprovado!")
+                }
             }
         )
             .catch((error) => {
@@ -68,16 +70,18 @@ const TripsDetailsPage = () => {
 
     const renderCandidates = candidates.map((candidate) => {
         return <DivCandidates key={candidate.id}>
-                    <p>{candidate.name}</p>
-                    <button onClick={() => putDecideCandidate(candidate.id, true)}>Aprovar</button>
-                    <button onClick={() => putDecideCandidate(candidate.id, false)}>Negar</button>
+                    <p><b>{candidate.name}</b></p>
+                    <DivButtons>
+                        <Button color="success" variant="outlined" onClick={() => putDecideCandidate(candidate.id, true)}>Aprovar</Button>
+                        <Button color="error" variant="outlined" onClick={() => putDecideCandidate(candidate.id, false)}>Negar</Button>
+                    </DivButtons>
                </DivCandidates>
     }
 )
 
     const renderApprovedCandidates = approvedCandidates.map((candidate) => {
         return <div key={candidate.id}>
-                    <p>{candidate.name}</p>
+                    <p><b>{candidate.name}</b></p>
                </div>
     }
 )
@@ -92,27 +96,40 @@ const TripsDetailsPage = () => {
     }
 } 
 
+    const BackAndDeleteTripId = () => {
+        localStorage.removeItem("tripId")
+        goBack(navigate)
+    }
    
-
     return (
         <div>
-            <h1> TripsDetailsPage</h1>
-            <div>      
-                <p><b>Nome: </b>{tripDetail.name}</p>
-                <p><b>Descrição </b>{tripDetail.description}</p>
-                <p><b>Planeta: </b>{tripDetail.planet}</p>
-                <p><b>Duração: </b>{tripDetail.durationInDays}</p>
-                <p><b>Data: </b>{tripDetail.date}</p>
-            </div>  
-            <button onClick={() => goBack(navigate)}>Voltar</button>
-            <div>
-                <h2>Candidatos Pendentes</h2>
-                {emptyCandidates(candidates, renderCandidates)}
-            </div>
-            <div>
-                <h2>Candidatos Aprovados</h2>
-                {emptyCandidates(approvedCandidates, renderApprovedCandidates)}
-            </div>
+            <DivTripDetails>
+                <H1Detail>Detalhes da viagem</H1Detail>
+                <DivDetails>      
+                    <p><BTripDetails>Nome: </BTripDetails>{tripDetail.name}</p>
+                    <p><BTripDetails>Descrição: </BTripDetails>{tripDetail.description}</p>
+                    <p><BTripDetails>Planeta: </BTripDetails>{tripDetail.planet}</p>
+                    <p><BTripDetails>Duração: </BTripDetails>{tripDetail.durationInDays}</p>
+                    <p><BTripDetails>Data: </BTripDetails>{tripDetail.date}</p>
+                    <Button variant="outlined" onClick={() => BackAndDeleteTripId()}>Voltar</Button>
+                </DivDetails>
+            </DivTripDetails>  
+            
+            <DivAllCandidates>
+                <ContainerCandidates>
+                    <div>
+                        <H1Detail>Candidatos Pendentes</H1Detail>
+                        {emptyCandidates(candidates, renderCandidates)}
+                    </div>
+                    <div>
+                        <H1Detail>Candidatos Aprovados</H1Detail>
+                        {emptyCandidates(approvedCandidates, renderApprovedCandidates)}
+                    </div>
+                </ContainerCandidates>
+            </DivAllCandidates>
+            <FooterFixo>
+                <p>© 2022 Todos direitos reservados.</p>
+            </FooterFixo>
         </div>
     )
 }

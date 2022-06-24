@@ -26,7 +26,7 @@ export const goToPublicArea = (navigate) => {
     navigate("/trips/list")
 }
 
-// PRIVATE AREA HOOK
+// PRIVATE AREA FUNCTION
 export const goToPrivateArea = (navigate) => {
     const token = localStorage.getItem("token")
     

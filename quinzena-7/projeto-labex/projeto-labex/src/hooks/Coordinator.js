@@ -20,6 +20,7 @@ export const goToSeeTripDetail = (navigate) => {
 export const goToPublicArea = (navigate) => {
     navigate("/trips/list")
 }
+
 // PRIVATE AREA HOOK
 export const goToPrivateArea = (navigate) => {
     const token = localStorage.getItem("token")
@@ -33,4 +34,3 @@ export const goToPrivateArea = (navigate) => {
     }
 }
 
-// navigate(`/trips/admin/trips/${localStorage.getItem("tripId")}`)

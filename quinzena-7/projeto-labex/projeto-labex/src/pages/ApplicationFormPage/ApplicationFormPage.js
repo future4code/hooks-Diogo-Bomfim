@@ -28,8 +28,7 @@ const ApplicationFormPage = () => {
         )
             .catch((error) => {
                 alert("Problema inesperado na inscrição :c")
-                cleanFields()
-                
+                cleanFields() 
             }
         )
     }       

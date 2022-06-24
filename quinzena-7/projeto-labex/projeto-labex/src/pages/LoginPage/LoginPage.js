@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
 import {useNavigate} from "react-router-dom";
 import { goBack } from "../../hooks/Coordinator";
 import useForm from "../../hooks/useForm";
 import axios from "axios";
-
+import {LoginForm, DivButtons, InputForm, H1Form, ButtonSend, Container} from "../LoginPage/styles"
+import {FooterFixo} from "../../constants/constants"
+import { Button } from "@mui/material";
 
 const LoginPage = () => {
     const navigate = useNavigate()
@@ -31,30 +32,36 @@ const LoginPage = () => {
         
     return (
         <div>
-            <h1>Login Page</h1>
-            <form onSubmit={postLogin}>
-                <input 
-                    placeholder="Enter your E-mail" 
-                    name="email"
-                    value={form.email} 
-                    onChange={onChange} 
-                    type="email" 
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                    title="Deve possuir formato de e-mail"
-                    required
-                />
-                <input 
-                    placeholder="Enter your password" 
-                    name="password"
-                    value={form.password} 
-                    onChange={onChange} 
-                    type="password" 
-                    required
-                />
-                <button>Entrar</button> 
-            </form>
-                
-                <button onClick={() => goBack(navigate)}>Voltar</button>
+            <Container>
+                <LoginForm onSubmit={postLogin}>
+                    <H1Form>Formulário de login</H1Form>
+                    <InputForm 
+                        placeholder="Digite seu E-mail" 
+                        name="email"
+                        value={form.email} 
+                        onChange={onChange} 
+                        type="email" 
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        title="Deve possuir formato de e-mail"
+                        required
+                    />
+                    <InputForm 
+                        placeholder="Digite sua senha" 
+                        name="password"
+                        value={form.password} 
+                        onChange={onChange} 
+                        type="password" 
+                        required
+                    />
+                    <DivButtons>
+                        <Button variant="outlined"  size="medium" disableElevation onClick={() => goBack(navigate)}>Voltar</Button>
+                        <ButtonSend>ENTRAR</ButtonSend>
+                    </DivButtons> 
+                </LoginForm>
+            </Container>
+            <FooterFixo>
+                <p>© 2022 Todos direitos reservados.</p>
+            </FooterFixo>
         </div>
     )
 }

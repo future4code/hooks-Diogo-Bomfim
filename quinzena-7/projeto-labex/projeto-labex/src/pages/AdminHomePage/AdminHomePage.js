@@ -1,9 +1,12 @@
 import {useNavigate} from "react-router-dom";
-import { goToCreateTrip, goToSeeTripDetail } from "../../hooks/Coordinator";
+import { goToCreateTrip, goToPrivateArea, goToSeeTripDetail } from "../../hooks/Coordinator";
 import { useProtectedPage } from "../../hooks/useProtectedPage";
 import axios from "axios"
 import useRequestData from "../../hooks/useRequestData";
 import { BASE_URL } from "../../constants/constants";
+import { FooterFixo } from "../../constants/constants";
+import { CardTripDiv, DivTrips, DivInitialInfos, H2InitialInfos, DivButtons }  from "../AdminHomePage/styles"
+import { Button } from "@mui/material";
 
 const AdminHomePage = () => {
     useProtectedPage()
@@ -21,8 +24,9 @@ const AdminHomePage = () => {
             .delete(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/diogo-bomfim-hooks/trips/${idTrip}`, headers)
 
             .then((response) => {
-                alert("Viagem deletada")
-            
+                if (window.confirm("Deseja mesmo apagar a viagem?")) {
+                    alert("Viagem apagada com sucesso!!!")
+                }
             }
         )
             .catch((error) => {
@@ -38,21 +42,38 @@ const AdminHomePage = () => {
             goToSeeTripDetail(navigate)
         }
     }
-    
+
+    const onClickLogOff = () => {
+        localStorage.removeItem("token")
+        goToPrivateArea(navigate)
+    }
+
     const renderTrips = tripList && tripList.trips.map((trip) => {
-        return <div key={trip.id}>
-                <p onClick={() => onClickSetTripId(trip.id)}>{trip.name}</p>
-                <button onClick={() => deleteTrip(trip.id)}>Delete</button>
-               </div>    
+        return <CardTripDiv key={trip.id}>
+                    <p><b>{trip.name}</b></p>
+                    <DivButtons>
+                        <Button variant="contained" onClick={() => onClickSetTripId(trip.id)}>VER DETALHES</Button>
+                        <Button color="error" variant="outlined" onClick={() => deleteTrip(trip.id)}>APAGAR</Button>
+                    </DivButtons>
+               </CardTripDiv>
+                   
         }
     )           
 
     return (
         <div>
-            <h1>Admin Home</h1>
-            <button onClick={() => goToCreateTrip(navigate)}>Criar Viagem</button>
-            {renderTrips}
-        </div>
+            <DivTrips>
+                <DivInitialInfos>
+                    <Button variant="outlined" disableElevation onClick={() => onClickLogOff()} >Logout</Button>
+                    <Button variant="contained" disableElevation onClick={() => goToCreateTrip(navigate)}>CRIAR VIAGEM</Button>
+                </DivInitialInfos>
+                <H2InitialInfos>Viagens</H2InitialInfos>
+                {renderTrips}
+            </DivTrips>
+            <FooterFixo>
+                <p>© 2022 Todos direitos reservados.</p>
+            </FooterFixo>
+        </div>  
     )
 }
 

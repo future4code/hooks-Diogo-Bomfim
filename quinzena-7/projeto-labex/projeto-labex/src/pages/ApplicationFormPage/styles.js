@@ -21,12 +21,17 @@ export const FormInput =  styled.input`
     width: 400px;
     height: 30px;
     border: 1px solid  #1976d2;
+    border-radius: 5px;
+    &:hover {
+        background-color: #e9e9e9;
+    }
 `
 export const FormTextArea = styled.input`
     width: 400px;
     height: 80px;
     resize: none;
     border: 1px solid  #1976d2;
+    border-radius: 5px;
 `
 export const FormButtonsDiv = styled.div`
     display: flex;
@@ -36,10 +41,14 @@ export const FormButtonsDiv = styled.div`
 `
 export const FormSelect = styled.select`
     width: 405px;
-    height: 25px;
+    height: 35px;
     background-color: #1976d2;
     color: white;
     border: none;
+    border-radius: 5px;
+    &:hover {
+        background-color: #1669bb;
+    }
 `
 export const FormOption = styled.option`
     background-color: white;

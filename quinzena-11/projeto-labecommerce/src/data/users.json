@@ -1,0 +1,44 @@
+[
+	{
+		"id" : "c4eaac6c-584a-40d8-be06-3e2389ddbeda",
+		"name" : "Diogo",
+		"email" : "diogo@gmail.com",
+		"password" : 111111
+	},
+	{
+		"id" : "93fbbfc4-9bb5-4881-9ecb-ddd47b12de98",
+		"name" : "Maria",
+		"email" : "maria@gmail.com",
+		"password" : 222222
+	},
+	{
+		"id" : "94e655d-584a-40d8-4881-3e2389ddbeda",
+		"name" : "Jorge",
+		"email" : "jorge@gmail.com",
+		"password" : 333333
+	},
+	{
+		"id" : "f5037664-eefc-48db-ae20-9388373ca57c",
+		"name" : "Pedro",
+		"email" : "pedro@gmail.com",
+		"password" : 444444
+	},
+	{
+		"id" : "0a4147ad-30dd-4547-9e35-94e655d02f13",
+		"name" : "Helany",
+		"email" : "helany@gmail.com",
+		"password" : 555555
+	},
+	{
+		"id" : "4d3bc362-f838-43d6-9e06-5f3883873f74",
+		"name" : "Mateus",
+		"email" : "mateus@gmail.com",
+		"password" : 666666
+	},
+	{
+		"id" : "5a7e728a-3afa-47d6-850d-0fba7786e6a7",
+		"name" : "Soter",
+		"email" : "soter@gmail.com",
+		"password" : 777777
+	}
+]

@@ -1,0 +1,50 @@
+[
+	{
+		"id" : "5f43cfb5-f15d-4baf-a631-f92b32be3859",
+		"name" : "Televisão 4K",
+		"price" : 7500,
+		"image_url" : "https://i.imgur.com/5a0gRfs.jpg"
+	},
+	{
+		"id" : "2eaea984-2d11-4a95-8ca3-e4da372db8eb",
+		"name" : "Notebook Acer",
+		"price" : 3200,
+		"image_url" : "https://i.imgur.com/iKm9KAx.jpg"
+	},
+	{
+		"id" : "07b03a14-3b8f-402d-9de0-ad8fd59b224d",
+		"name" : "Calculadora",
+		"price" : 50,
+		"image_url" : "https://i.imgur.com/pwO7vAE.jpg"
+	},
+	{
+		"id" : "baceb5f5-3914-45e4-a1f6-43964f3c8350",
+		"name" : "Smartphone",
+		"price" : 1999,
+		"image_url" : "https://i.imgur.com/QeuzMtA.jpg"
+	},
+	{
+		"id" : "181eae92-1f08-4dc5-9cdf-040537f90752",
+		"name" : "Processador i5 10TH GEN",
+		"price" : 1200,
+		"image_url" : "https://i.imgur.com/DH1PXTE.jpg"
+	},
+	{
+		"id" : "57bce8b9-b521-47f1-a3ff-01cbafa5988f",
+		"name" : "HD Externo 3TB",
+		"price" : 3500,
+		"image_url" : "https://i.imgur.com/DNINOJN.jpg"
+	},
+	{
+		"id" : "1b845778-e2c5-4f8c-8baf-c68557991db4",
+		"name" : "Gift Card 12 Meses",
+		"price" : 300,
+		"image_url" : "https://i.imgur.com/3AWXSVE.jpg"
+	},
+    {
+		"id" : "2b33f12a-6478-4afb-8f12-483b44aa6eb9",
+		"name" : "Cabo HDMI",
+		"price" : 67,
+		"image_url" : "https://i.imgur.com/k6NEzZC.jpg"
+	}
+]

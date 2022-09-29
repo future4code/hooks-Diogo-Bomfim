@@ -1,0 +1,30 @@
+[
+	{
+		"id" : "b73ba66c-d8e5-4b69-9870-e5a953b59381",
+		"user_id" : "c4eaac6c-584a-40d8-be06-3e2389ddbeda",
+		"product_id" : "181eae92-1f08-4dc5-9cdf-040537f90752",
+		"quantity" : 2,
+        "total_price" : 2400
+	},
+	{
+		"id" : "c2e885f7-281a-4f49-89fe-9f6d50b8ea6e",
+		"user_id" : "94e655d-584a-40d8-4881-3e2389ddbeda",
+		"product_id" : "baceb5f5-3914-45e4-a1f6-43964f3c8350",
+		"quantity" : 1,
+        "total_price" : 1999
+	},
+	{
+		"id" : "2bdbb834-c494-49fd-8970-58f3edd903ca",
+		"user_id" : "0a4147ad-30dd-4547-9e35-94e655d02f13",
+		"product_id" : "07b03a14-3b8f-402d-9de0-ad8fd59b224d",
+		"quantity" : 2,
+        "total_price" : 100
+	},
+	{
+		"id" : "0c941b8e-0a4e-455e-9d8b-bb4ab69ca4ad",
+		"user_id" : "5a7e728a-3afa-47d6-850d-0fba7786e6a7",
+		"product_id" : "1b845778-e2c5-4f8c-8baf-c68557991db4",
+		"quantity" : 5,
+        "total_price" : 1500
+	}
+]

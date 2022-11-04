@@ -1,0 +1,6 @@
+-- Active: 1663296944663@@35.226.146.116@3306@hooks-4313245-diogo-bomfim
+CREATE TABLE IF NOT EXISTS Auth_users (
+    id VARCHAR(255) PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+)

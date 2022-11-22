@@ -1,0 +1,50 @@
+// USER SIGNUP
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{   
+    "name" : "Diogo",
+    "email" : "diogo@gmail.com",
+    "password" : "123456"
+}
+
+// LOGIN
+####
+GET http://localhost:3003/user/login
+Content-Type: application/json
+
+{   
+    "email" : "diogo@gmail.com",
+    "password" : "123456"
+}
+
+// GET USER BY TOKEN
+####
+GET http://localhost:3003/user/profile
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6eyJpZCI6IjM1MzVmNGI2LTMzNmUtNDlkNC1iODA2LWRiYzU2MzFjM2NiZSJ9LCJpYXQiOjE2Njc5MzY4NTQsImV4cCI6MTY2Nzk0MDQ1NH0.jzCvjR9I4bEAUshTbFJs03UHW_SP0d3i3EF4mWA9ifA
+Content-Type: application/json
+
+
+// GET USER BY ID 
+####
+GET http://localhost:3003/user/3535f4b6-336e-49d4-b806-dbc5631c3cbe
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6eyJpZCI6IjM1MzVmNGI2LTMzNmUtNDlkNC1iODA2LWRiYzU2MzFjM2NiZSJ9LCJpYXQiOjE2Njc5MzY4NTQsImV4cCI6MTY2Nzk0MDQ1NH0.jzCvjR9I4bEAUshTbFJs03UHW_SP0d3i3EF4mWA9ifA
+Content-Type: application/json
+
+// CREATE RECIPE
+####
+POST http://localhost:3003/recipe
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6eyJpZCI6IjM1MzVmNGI2LTMzNmUtNDlkNC1iODA2LWRiYzU2MzFjM2NiZSJ9LCJpYXQiOjE2NjgwMTU2NTksImV4cCI6MTY2ODAxOTI1OX0.EdOVYliHTCbz4qT1dKEvdY87XXqd28ygEgsb310nPDU
+Content-Type: application/json
+
+{   
+    "title" : "Caju doce",
+    "description" : "Compre um caju e jogue açúcar"
+}
+
+// GET RECIPE
+####
+GET http://localhost:3003/recipe/04d7c949-59e0-4e4e-a919-e5754f5f6e75
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6eyJpZCI6IjM1MzVmNGI2LTMzNmUtNDlkNC1iODA2LWRiYzU2MzFjM2NiZSJ9LCJpYXQiOjE2NjgwMzgzNjMsImV4cCI6MTY2ODA0MTk2M30.N_n8JezvtV4ILro479AReA-nJDdI_wBg1WG-OUBkN6Q
+Content-Type: application/json
+
